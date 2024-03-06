@@ -1,5 +1,10 @@
 const express = require('express');
-const app = express()
+const app = express();
+
+//config  by dotenv
+require('dotenv').config();
+//fetichimg data from env
+const PORT = process.env.PORT||3000;
 
 const db = require('./db');
 
@@ -28,6 +33,6 @@ app.use('/menu',menuRouts)
 
 
 //LISTENING ON PORT 3000
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Server is Running on the port 3000...")
 })
