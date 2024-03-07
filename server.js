@@ -22,8 +22,6 @@ app.get('/', function (req, res) {
 //import the router files personroutes
 const personRouts =require("./routs/personrouts");
 //Use the Routes
-
-
 app.use('/person',personRouts)
 //import the router files menuRoutes
 const menuRouts =require("./routs/menuRoutes");
